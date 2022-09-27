@@ -1,3 +1,12 @@
+# ***Kandai's Edit***
+Use the Dockerfile to build an image & run a container on vs code.
+Python version must be 3.7, numpy==1.19.5, tensorflow==2.2.0, and must install `spot` library for evaluation.
+Also, add the following so that Python can find where the spot library is during the runtime.
+
+```bash
+echo 'export LD_LIBRARY_PATH=/usr/local/lib' >> ~/.bashrc
+```
+
 # DeepLTL
 
 This repository is the official implementation of the ICLR'21 paper [Teaching Temporal Logics to Neural Networks](https://arxiv.org/abs/2003.04218).
@@ -11,7 +20,7 @@ With this learning framework, it seems to be easier to learn the semantics of th
 The Transformer preserves this semantic generalization even when challenged with formulas of a size it has never encountered before (see following picture):
 <img src="images/ltl_treepe_gen.png">
 Performance of our best model *(only trained on LTL formulas up to length 35)* on LTL formulas up to length 50 with a tree positional encoding. Exact syntactic matches are displayed in green, the semantic accuracy in light green and the incorrect predictions in orange. The shaded area indicates the formula sizes the model was not trained on. For more details see [Teaching Temporal Logics to Neural Networks](https://arxiv.org/abs/2003.04218).
-    
+
 Surprisingly, the Transformer solves almost all LTL formulas in our test set including those for which our generator timed out. For example, very complex formulas such as (LTL formula above, predicted satisfying trace below):
 <img src="images/example.png">
 
@@ -72,7 +81,7 @@ The following parameter can be specified when training the models:
 | --------------------- | --------- | ------------------------------------------------------------ |
 | problem               | ltl       | problem (either ltl or prop)                                 |
 | ds-name               | ltl-35    | dataset name                                                 |
-| run-name              | default   | name of the training / testing run                           | 
+| run-name              | default   | name of the training / testing run                           |
 | d-embed-enc           | 128       | embedding dimension encoder                                  |
 | d-embed-dec           | 128       | embedding dimension decoder                                  |
 | num-layers            | 4         | number of encoder/decoder layers                             |
