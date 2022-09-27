@@ -151,10 +151,10 @@ def test_and_analyze_ltl(pred_fn, dataset, in_vocab=None, out_vocab=None, plot_n
         sys.exit('Pipe to trace checker broke. output:' + proc.communicate()[0])
     sys.stdout.flush()
     proc_out, _ = proc.communicate()
-    tf.io.gfile.copy('tmp_test_results.png', path.join(plotdir, plot_name + '.png'), overwrite=True)
-    tf.io.gfile.remove('tmp_test_results.png')
-    tf.io.gfile.copy('tmp_test_results.svg', path.join(plotdir, plot_name + '.svg'), overwrite=True)
-    tf.io.gfile.remove('tmp_test_results.svg')
+    # tf.io.gfile.copy('tmp_test_results.png', path.join(plotdir, plot_name + '.png'), overwrite=True)
+    # tf.io.gfile.remove('tmp_test_results.png')
+    # tf.io.gfile.copy('tmp_test_results.svg', path.join(plotdir, plot_name + '.svg'), overwrite=True)
+    # tf.io.gfile.remove('tmp_test_results.svg')
     return proc_out
 
 

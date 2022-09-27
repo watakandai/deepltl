@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Module",
+            "type": "python",
+            "request": "launch",
+            "module": "deepltl.train.train_transformer",
+            "justMyCode": false,
+            "args": [
+                "--problem", "ltl",
+                "--ds-name", "ltl-35",
+                "--epochs", "5"
+            ]
+        },
+        {
+            "name": "Python: Evaluation",
+            "type": "python",
+            "request": "launch",
+            "module": "deepltl.train.train_transformer",
+            "justMyCode": false,
+            "args": [
+                "--problem", "ltl",
+                "--ds-name", "ltl-50-test",
+                "--test",
+            ]
+        }
+    ]
+}
